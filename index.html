@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mimikri — The Party Game</title>
+  <meta name="description" content="Hold the phone to your forehead, friends act it out, you guess before the buzzer. Bollywood, Cricket, Hit Hindi Songs and more. No login. Works offline. Free." />
+  <link rel="icon" href="assets/mimikri-icon-1024.png" />
+  <meta property="og:title" content="Mimikri — The Party Game" />
+  <meta property="og:description" content="India's filmi party game. Forehead pe phone, and let the drama begin!" />
+  <meta property="og:image" content="assets/mimikri-icon-1024.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Titan+One&family=Baloo+2:wght@500;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <a class="brand" href="index.html">
+      <img src="assets/mimikri-icon-1024.png" alt="Mimikri icon" />
+      MIMIKRI
+    </a>
+    <ul class="nav-links">
+      <li><a href="#how">How to Play</a></li>
+      <li><a href="#decks">Decks</a></li>
+      <li><a href="#why">Why Mimikri</a></li>
+      <li><a href="contact/">Contact</a></li>
+    </ul>
+    <a class="btn primary" href="#get">Get the App</a>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="sunburst"></div>
+
+    <div class="float-card fc-1"><span class="mini">BOLLYWOOD</span>SHOLAY</div>
+    <div class="float-card fc-2"><span class="mini">CRICKET</span>VIRAT KOHLI</div>
+    <div class="float-card fc-3"><span class="mini">HIT HINDI SONGS</span>CHAIYYA CHAIYYA</div>
+    <div class="float-card fc-4"><span class="mini">ACT IT OUT</span>FLYING A KITE</div>
+    <div class="float-card fc-5"><span class="mini">DESI ZINDAGI</span>MOGAMBO KHUSH HUA</div>
+    <div class="float-card fc-6"><span class="mini">SOUTH CINEMA</span>BAAHUBALI</div>
+    <div class="float-card fc-7"><span class="mini">HOLLYWOOD</span>TITANIC</div>
+    <div class="float-card fc-8"><span class="mini">INDIAN STARS</span>AMITABH BACHCHAN</div>
+    <div class="float-card fc-9"><span class="mini">ENGLISH TV &amp; WEB</span>MONEY HEIST</div>
+    <div class="float-card fc-10"><span class="mini">HOLLYWOOD STARS</span>TOM CRUISE</div>
+    <div class="float-card fc-11"><span class="mini">ANIMALS &amp; KIDS</span>ELEPHANT</div>
+    <div class="float-card fc-12"><span class="mini">INDIAN TV &amp; WEB</span>TAARAK MEHTA</div>
+
+    <div class="hero-inner">
+      <span class="kicker reveal in">🎬 &nbsp;THE PARTY GAME&nbsp; 🎬</span>
+      <h1>MIMIKRI</h1>
+      <p class="tagline reveal in" style="--d:.15s">
+        Phone on your forehead. Friends going <strong>full filmi</strong> to make you
+        guess the word. Beat the buzzer — <strong>let the drama begin!</strong>
+      </p>
+      <div class="hero-cta reveal in" style="--d:.3s">
+        <a class="btn primary" href="#get">📱 &nbsp;Get the App</a>
+        <a class="btn ghost" href="#how">▶ &nbsp;How it works</a>
+      </div>
+      <p class="store-note reveal in" style="--d:.45s">No login · Works offline · Free to play</p>
+    </div>
+
+    <a class="scroll-hint" href="#how" aria-label="Scroll to How to Play">
+      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 4v14" /><path d="M5.5 12.5 12 19l6.5-6.5" />
+      </svg>
+    </a>
+  </header>
+
+  <!-- MARQUEE -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>🎬 BOLLYWOOD <em>★</em></span><span>🏏 CRICKET <em>★</em></span><span>🎵 HIT HINDI SONGS <em>★</em></span><span>📺 INDIAN TV &amp; WEB <em>★</em></span><span>⭐ INDIAN STARS <em>★</em></span><span>🎥 SOUTH CINEMA <em>★</em></span><span>🎭 ACT IT OUT <em>★</em></span><span>🍛 DESI ZINDAGI <em>★</em></span><span>🍿 HOLLYWOOD <em>★</em></span><span>🐘 ANIMALS &amp; KIDS <em>★</em></span>
+      <span>🎬 BOLLYWOOD <em>★</em></span><span>🏏 CRICKET <em>★</em></span><span>🎵 HIT HINDI SONGS <em>★</em></span><span>📺 INDIAN TV &amp; WEB <em>★</em></span><span>⭐ INDIAN STARS <em>★</em></span><span>🎥 SOUTH CINEMA <em>★</em></span><span>🎭 ACT IT OUT <em>★</em></span><span>🍛 DESI ZINDAGI <em>★</em></span><span>🍿 HOLLYWOOD <em>★</em></span><span>🐘 ANIMALS &amp; KIDS <em>★</em></span>
+    </div>
+  </div>
+
+  <!-- HOW TO PLAY -->
+  <section class="section" id="how">
+    <div class="section-head reveal">
+      <span class="ticket">NOW SHOWING</span>
+      <h2>How to Play</h2>
+      <p>Three steps. Zero setup. Maximum hungama.</p>
+    </div>
+
+    <div class="steps" data-stagger>
+      <div class="step card reveal pop">
+        <span class="num">1</span>
+        <div class="art">🎴</div>
+        <h3>PICK A DECK</h3>
+        <p>Bollywood, Cricket, Hit Hindi Songs… or mix your own combo with Mixed Play.</p>
+      </div>
+      <div class="step card reveal pop">
+        <span class="num">2</span>
+        <div class="art"><span class="landscape-phone">📱</span></div>
+        <h3>FOREHEAD, PLEASE</h3>
+        <p>Hold the phone to your forehead — everyone else acts, sings and describes the word.</p>
+      </div>
+      <div class="step card reveal pop">
+        <span class="num">3</span>
+        <div class="art">🏆</div>
+        <h3>TILT TO SCORE</h3>
+        <p>Guessed it? Tilt down. Stuck? Tilt up to pass. Rack up points before the buzzer!</p>
+      </div>
+    </div>
+
+    <div class="tilt-legend reveal" style="--d:.2s">
+      <span class="pill correct">✓ &nbsp;Tilt down = Correct</span>
+      <span class="pill pass">✗ &nbsp;Tilt up = Pass</span>
+    </div>
+
+    <div class="phone-wrap reveal pop" style="--d:.1s">
+      <div class="phone" aria-hidden="true">
+        <div class="phone-screen">
+          <span class="timer">0:47</span>
+          <span class="deckname">INDIAN STARS</span>
+          <div class="word">SHAH RUKH KHAN</div>
+          <span class="hint">King of romance</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DECKS -->
+  <section class="section" id="decks">
+    <div class="section-head reveal">
+      <span class="ticket">HOUSEFULL</span>
+      <h2>12 Decks. Thousands of Cards.</h2>
+      <p>From Sholay to Shinchan, Sachin to Chaiyya Chaiyya — there's a deck for every mehfil.</p>
+    </div>
+
+    <div class="deck-grid" data-stagger>
+      <div class="deck reveal pop" style="background: var(--tile-1)"><span class="badge hot">🔥 HOT</span><div class="emoji">🎬</div><h3>BOLLYWOOD</h3></div>
+      <div class="deck reveal pop" style="background: var(--tile-2)"><div class="emoji">🍿</div><h3>HOLLYWOOD</h3></div>
+      <div class="deck reveal pop" style="background: var(--tile-3)"><div class="emoji">🏏</div><h3>CRICKET</h3></div>
+      <div class="deck reveal pop" style="background: var(--tile-4)"><div class="emoji">📺</div><h3>INDIAN TV &amp; WEB</h3></div>
+      <div class="deck reveal pop" style="background: var(--tile-5)"><span class="badge">NEW</span><div class="emoji">🎞️</div><h3>ENGLISH TV &amp; WEB</h3></div>
+      <div class="deck reveal pop" style="background: var(--tile-6)"><div class="emoji">🎵</div><h3>HIT HINDI SONGS</h3></div>
+      <div class="deck reveal pop" style="background: var(--tile-7)"><div class="emoji">⭐</div><h3>INDIAN STARS</h3></div>
+      <div class="deck reveal pop" style="background: var(--tile-8)"><span class="badge">NEW</span><div class="emoji">⭐</div><h3>HOLLYWOOD STARS</h3></div>
+      <div class="deck reveal pop" style="background: var(--tile-9)"><div class="emoji">🍛</div><h3>DESI ZINDAGI</h3></div>
+      <div class="deck reveal pop" style="background: var(--tile-10)"><div class="emoji">🐘</div><h3>ANIMALS &amp; KIDS</h3></div>
+      <div class="deck reveal pop" style="background: var(--tile-1)"><div class="emoji">🎥</div><h3>SOUTH CINEMA</h3></div>
+      <div class="deck reveal pop" style="background: var(--tile-2)"><span class="badge">NEW</span><div class="emoji">🎭</div><h3>ACT IT OUT</h3></div>
+      <div class="deck-mix reveal">
+        🎲 &nbsp;MIXED PLAY &nbsp;<span class="sub">— pick any decks, we shuffle them into one wild round</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY MIMIKRI -->
+  <section class="section" id="why">
+    <div class="section-head reveal">
+      <span class="ticket">PAKKA PROMISE</span>
+      <h2>Why Mimikri?</h2>
+      <p>Built for the living room, the terrace, the train — anywhere the gang gathers.</p>
+    </div>
+
+    <div class="promises" data-stagger>
+      <div class="promise card reveal from-left">
+        <div class="art">🚫</div>
+        <h3>NO LOGIN. EVER.</h3>
+        <p>No accounts, no OTPs, no sign-up walls. Open the app and play.</p>
+      </div>
+      <div class="promise card reveal from-left">
+        <div class="art">✈️</div>
+        <h3>WORKS OFFLINE</h3>
+        <p>Every deck lives on your phone. No network? No problem.</p>
+      </div>
+      <div class="promise card reveal from-right">
+        <div class="art">🛡️</div>
+        <h3>NEVER ADS MID-GAME</h3>
+        <p>The round is sacred. Nothing ever interrupts gameplay. Pakka.</p>
+      </div>
+      <div class="promise card reveal from-right">
+        <div class="art">🌍</div>
+        <h3>DESI + VIDESI</h3>
+        <p>Bollywood to Hollywood, Kajra Re to Money Heist — hits in Hindi and English.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section" id="get">
+    <div class="cta-panel reveal pop">
+      <div class="sunburst"></div>
+      <h2>READY FOR HUNGAMA?</h2>
+      <p>Coming soon to the App Store and Google Play.</p>
+      <a class="btn" href="contact/">🔔 &nbsp;Notify me at launch</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <a class="brand" href="index.html">
+        <img src="assets/mimikri-icon-1024.png" alt="Mimikri icon" />
+        MIMIKRI
+      </a>
+      <ul class="footer-links">
+        <li><a href="terms/">Terms of Service</a></li>
+        <li><a href="privacy/">Privacy Policy</a></li>
+        <li><a href="contact/">Contact</a></li>
+      </ul>
+      <p class="copy">© <span id="year">2026</span> Mimikri · The Party Game · Made with ❤️ in India</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
