@@ -239,7 +239,11 @@ a { color: inherit; }
 @keyframes bob { 0%, 100% { translate: 0 0; } 50% { translate: 0 -14px; } }
 @media (max-width: 1100px) { .fc-7, .fc-8, .fc-9, .fc-10 { display: none; } }
 @media (max-width: 900px) { .fc-5, .fc-6, .fc-11, .fc-12 { display: none; } }
-@media (max-width: 640px) { .fc-1, .fc-3, .fc-4 { display: none; } .float-card { padding: 9px 13px; } }
+@media (max-width: 640px) {
+  .fc-1, .fc-4 { display: none; }
+  .float-card { padding: 9px 13px; }
+  .fc-3 { top: 12%; bottom: auto; left: 5%; right: auto; rotate: -6deg; }
+}
 
 /* scroll hint — themed round button, not an emoji */
 .scroll-hint {
