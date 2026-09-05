@@ -47,7 +47,9 @@
       border-radius: 20px;
       border: var(--border);
       box-shadow: 4px 4px 0 var(--ink);
-      margin-bottom: 16px;
+      /* The site sets a global `img { display: block }`, so the card's
+         text-align: center can't centre this — it needs auto margins. */
+      margin: 0 auto 16px;
     }
     .get-card h1 {
       font-family: var(--display);
