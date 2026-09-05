@@ -18,53 +18,61 @@
   <link href="https://fonts.googleapis.com/css2?family=Titan+One&family=Baloo+2:wght@500;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../css/style.css" />
   <style>
+    /* One screen, no scrolling: everything that matters — both store buttons —
+       must be visible the moment the page paints, since anyone who lands here
+       is trying to leave for a store. */
     .get-wrap {
+      position: relative;
+      overflow: hidden;
       min-height: 100svh;
       display: grid;
       place-items: center;
-      padding: 32px 20px;
+      padding: 24px 20px;
       text-align: center;
     }
     .get-card {
       position: relative;
-      overflow: hidden;
-      max-width: 560px;
+      z-index: 1;
+      max-width: 480px;
       width: 100%;
       background: var(--paper);
       border: var(--border);
       border-radius: var(--radius);
       box-shadow: 8px 8px 0 var(--ink);
-      padding: 44px 28px 36px;
+      padding: 32px 22px 26px;
     }
-    .get-card > * { position: relative; z-index: 1; }
     .get-icon {
-      width: 104px;
-      height: 104px;
-      border-radius: 24px;
+      width: 84px;
+      height: 84px;
+      border-radius: 20px;
       border: var(--border);
-      box-shadow: 5px 5px 0 var(--ink);
-      margin-bottom: 22px;
+      box-shadow: 4px 4px 0 var(--ink);
+      margin-bottom: 16px;
     }
     .get-card h1 {
       font-family: var(--display);
-      font-size: clamp(2rem, 7vw, 3rem);
+      font-size: clamp(1.75rem, 6.5vw, 2.5rem);
       line-height: 1.05;
       color: var(--vermilion);
       text-shadow: 3px 3px 0 var(--mustard);
-      margin: 0 0 10px;
+      margin: 0 0 8px;
     }
-    .get-card p { margin: 0 auto 26px; max-width: 40ch; }
-    .get-btns { display: flex; flex-direction: column; gap: 14px; align-items: center; }
-    .get-btns .btn { width: min(320px, 100%); justify-content: center; }
-    .get-back { display: inline-block; margin-top: 24px; font-weight: 700; }
+    .get-card p { margin: 0 auto 22px; max-width: 34ch; font-size: 0.95rem; }
+    .get-btns { display: flex; flex-direction: column; gap: 12px; align-items: center; }
+    .get-btns .btn { width: 100%; justify-content: center; }
+    .get-back { display: inline-block; margin-top: 18px; font-weight: 700; font-size: 0.9rem; }
   </style>
 </head>
 <body>
 
   <main class="get-wrap">
-    <div class="get-card">
-      <div class="sunburst"></div>
+    <!-- Sunburst lives on the full-page wrapper, not inside the card: iOS Safari
+         lets an animated absolutely-positioned child escape a rounded card's
+         overflow clip, which painted it across the whole page and made this
+         short page scroll for screens. Same pattern as .hero on the homepage. -->
+    <div class="sunburst"></div>
 
+    <div class="get-card">
       <img class="get-icon" src="../assets/mimikri-icon-1024.png" alt="Mimikri icon" />
       <h1>GET MIMIKRI</h1>
       <p>Phone on your forehead, friends act it out, you guess before the buzzer.</p>
