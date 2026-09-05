@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Get Mimikri</title>
+  <meta name="description" content="Download Mimikri — the desi party game — on the App Store and Google Play." />
+  <link rel="icon" href="../assets/mimikri-icon-1024.png" />
+  <link rel="canonical" href="https://mimikri.in/app/" />
+
+  <!-- Sent here from a QR code, a shared link or an ad: hand the visitor
+       straight to their own store. Desktop and anything unrecognised falls
+       through to the buttons below, which are also the no-JS experience. -->
+  <meta name="robots" content="noindex" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Titan+One&family=Baloo+2:wght@500;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <style>
+    .get-wrap {
+      min-height: 100svh;
+      display: grid;
+      place-items: center;
+      padding: 32px 20px;
+      text-align: center;
+    }
+    .get-card {
+      position: relative;
+      overflow: hidden;
+      max-width: 560px;
+      width: 100%;
+      background: var(--paper);
+      border: var(--border);
+      border-radius: var(--radius);
+      box-shadow: 8px 8px 0 var(--ink);
+      padding: 44px 28px 36px;
+    }
+    .get-card > * { position: relative; z-index: 1; }
+    .get-icon {
+      width: 104px;
+      height: 104px;
+      border-radius: 24px;
+      border: var(--border);
+      box-shadow: 5px 5px 0 var(--ink);
+      margin-bottom: 22px;
+    }
+    .get-card h1 {
+      font-family: var(--display);
+      font-size: clamp(2rem, 7vw, 3rem);
+      line-height: 1.05;
+      color: var(--vermilion);
+      text-shadow: 3px 3px 0 var(--mustard);
+      margin: 0 0 10px;
+    }
+    .get-card p { margin: 0 auto 26px; max-width: 40ch; }
+    .get-btns { display: flex; flex-direction: column; gap: 14px; align-items: center; }
+    .get-btns .btn { width: min(320px, 100%); justify-content: center; }
+    .get-back { display: inline-block; margin-top: 24px; font-weight: 700; }
+  </style>
+</head>
+<body>
+
+  <main class="get-wrap">
+    <div class="get-card">
+      <div class="sunburst"></div>
+
+      <img class="get-icon" src="../assets/mimikri-icon-1024.png" alt="Mimikri icon" />
+      <h1>GET MIMIKRI</h1>
+      <p>Phone on your forehead, friends act it out, you guess before the buzzer.</p>
+
+      <div class="get-btns">
+        <a class="btn primary" id="ios" href="https://apps.apple.com/app/id6790110208">
+          &#63743; &nbsp;Download on the App Store
+        </a>
+        <!-- PLAY-LIVE: restore the anchor (and flip PLAY_LIVE below) once the
+             Play listing stops 404ing.
+             <a class="btn" id="android" href="https://play.google.com/store/apps/details?id=com.mimikri.party">
+               &#9654; &nbsp;Get it on Google Play
+             </a> -->
+        <span class="btn pending" id="android">
+          &#9654; &nbsp;Coming soon on Google Play
+        </span>
+      </div>
+
+      <a class="get-back" href="../index.html">← Back to mimikri.in</a>
+    </div>
+  </main>
+
+  <script>
+    // Bounce straight to the matching store. Kept inline and dependency-free so
+    // it runs before paint — a visitor from a QR code should land in their store,
+    // not on an interstitial. Anything we can't identify (desktop, unknown UA)
+    // simply keeps the two buttons above, which is also the no-JS fallback.
+    (function () {
+      // PLAY-LIVE: flip to true when the Play listing is public. Until then an
+      // Android visitor stays on this page (with the App Store still offered)
+      // rather than being bounced to a 404.
+      var PLAY_LIVE = false;
+
+      var ua = navigator.userAgent || "";
+      var isIOS =
+        /iPad|iPhone|iPod/.test(ua) ||
+        // iPadOS 13+ reports as a Mac; the touch-point check separates them.
+        (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1);
+      var isAndroid = /Android/.test(ua);
+      // Don't hijack in-app browsers that preview links (they'd follow the
+      // redirect and show a store page inside a chat bubble).
+      var isPreviewBot = /bot|crawler|spider|preview|facebookexternalhit|WhatsApp|Twitterbot/i.test(ua);
+
+      if (isPreviewBot) return;
+      if (isIOS) location.replace(document.getElementById("ios").href);
+      else if (isAndroid && PLAY_LIVE) location.replace(document.getElementById("android").href);
+    })();
+  </script>
+
+</body>
+</html>
