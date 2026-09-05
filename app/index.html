@@ -73,14 +73,9 @@
         <a class="btn primary" id="ios" href="https://apps.apple.com/app/id6790110208">
           &#63743; &nbsp;Download on the App Store
         </a>
-        <!-- PLAY-LIVE: restore the anchor (and flip PLAY_LIVE below) once the
-             Play listing stops 404ing.
-             <a class="btn" id="android" href="https://play.google.com/store/apps/details?id=com.mimikri.party">
-               &#9654; &nbsp;Get it on Google Play
-             </a> -->
-        <span class="btn pending" id="android">
-          &#9654; &nbsp;Coming soon on Google Play
-        </span>
+        <a class="btn" id="android" href="https://play.google.com/store/apps/details?id=com.mimikri.party">
+          &#9654; &nbsp;Get it on Google Play
+        </a>
       </div>
 
       <a class="get-back" href="../index.html">← Back to mimikri.in</a>
@@ -93,11 +88,6 @@
     // not on an interstitial. Anything we can't identify (desktop, unknown UA)
     // simply keeps the two buttons above, which is also the no-JS fallback.
     (function () {
-      // PLAY-LIVE: flip to true when the Play listing is public. Until then an
-      // Android visitor stays on this page (with the App Store still offered)
-      // rather than being bounced to a 404.
-      var PLAY_LIVE = false;
-
       var ua = navigator.userAgent || "";
       var isIOS =
         /iPad|iPhone|iPod/.test(ua) ||
@@ -110,7 +100,7 @@
 
       if (isPreviewBot) return;
       if (isIOS) location.replace(document.getElementById("ios").href);
-      else if (isAndroid && PLAY_LIVE) location.replace(document.getElementById("android").href);
+      else if (isAndroid) location.replace(document.getElementById("android").href);
     })();
   </script>
 
