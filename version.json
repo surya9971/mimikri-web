@@ -9,7 +9,7 @@
   "ios": {
     "min": 0,
     "latest": 14,
-    "message": "Purchases are more reliable in this update, and unlocked decks now restore properly.",
+    "message": "Purchase fixes and smoother play.",
     "storeUrl": "https://apps.apple.com/app/id6790110208"
   }
 }
