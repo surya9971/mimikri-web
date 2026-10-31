@@ -2,14 +2,14 @@
   "_comment": "Update gate for the Mimikri app. Both numbers at 0 = no prompt. Raise 'latest' for a dismissible nudge; raise 'min' only for a genuinely broken build, because that dialog CANNOT be dismissed by anyone below it.",
   "android": {
     "min": 0,
-    "latest": 14,
-    "message": "Purchase fixes and smoother play.",
+    "latest": 17,
+    "message": "Try premium decks free, hand-picked decks and no repeats.",
     "storeUrl": "https://play.google.com/store/apps/details?id=com.mimikri.party"
   },
   "ios": {
     "min": 0,
-    "latest": 14,
-    "message": "Purchase fixes and smoother play.",
+    "latest": 17,
+    "message": "Try premium decks free, hand-picked decks and no repeats.",
     "storeUrl": "https://apps.apple.com/app/id6790110208"
   }
 }
